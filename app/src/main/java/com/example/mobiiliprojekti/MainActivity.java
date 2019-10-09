@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button main2Activity = (Button) findViewById(R.id.button);
+        Button main2Activity = (Button) findViewById(R.id.elainButton);
         main2Activity.setOnClickListener(new Button.OnClickListener(){
             public void onClick(View arg0){
                 Toast.makeText(getApplicationContext(), "Button selected !", Toast.LENGTH_LONG).show();
