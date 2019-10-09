@@ -21,6 +21,13 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Button selected !", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(getApplicationContext(), Main2Activity.class);
                 startActivity(intent);
-    }});
+            }});
+        Button addSiteActivity = (Button) findViewById(R.id.addSiteButton);
+        addSiteActivity.setOnClickListener(new Button.OnClickListener(){
+            public void onClick(View arg0){
+                Toast.makeText(getApplicationContext(), "Add site view showing", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getApplicationContext(), AddSiteActivity.class);
+                startActivity(intent);
+            }});
     }
 }
