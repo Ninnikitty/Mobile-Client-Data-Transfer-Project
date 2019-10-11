@@ -21,11 +21,11 @@ public class MainActivity extends AppCompatActivity {
         final ListView myListView = (ListView)findViewById(R.id.myListView);
 
 
-        // Nappi vie main2Activity:lle joka aukaisee uuden sivun randomille eläin kuvalle
+        // Nappi vie main2Activity:lle joka hakee kissakuvan
         Button main2Activity = (Button) findViewById(R.id.animalButton);
         main2Activity.setOnClickListener(new Button.OnClickListener(){
             public void onClick(View arg0){
-                Toast.makeText(getApplicationContext(), "Button selected !", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Etsitään kissaa internetin syöväreistä...      ", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(getApplicationContext(), Main2Activity.class);
                 startActivity(intent);
             }});
