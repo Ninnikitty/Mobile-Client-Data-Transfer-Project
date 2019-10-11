@@ -9,12 +9,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+
 public class AddSiteActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_site);
+
         final EditText siteTextField = findViewById(R.id.siteTextField);
 
         final Button addSiteToList = findViewById(R.id.addSiteToList);
@@ -27,8 +29,5 @@ public class AddSiteActivity extends AppCompatActivity {
 
             }
         });
-
-
-
     }
 }

@@ -3,7 +3,7 @@ package com.example.mobiiliprojekti;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
+
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -30,11 +30,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+        final ListView myListView = (ListView)findViewById(R.id.myListView);
+
         // Nappi vie main2Activity:lle joka aukaisee uuden sivun randomille eläin kuvalle
+
         Button main2Activity = (Button) findViewById(R.id.animalButton);
         main2Activity.setOnClickListener(new Button.OnClickListener(){
             public void onClick(View arg0){
-                Toast.makeText(getApplicationContext(), "Button selected !", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Etsitään kissaa internetin syöväreistä...      ", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(getApplicationContext(), Main2Activity.class);
                 startActivity(intent);
             }});
@@ -52,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
         Button googleButton = (Button) findViewById(R.id.googleButton);
         googleButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
                 Intent googleLinkki = new Intent(android.content.Intent.ACTION_VIEW);
                 googleLinkki.setData(Uri.parse("http://www.google.com"));
                 startActivity(googleLinkki);
