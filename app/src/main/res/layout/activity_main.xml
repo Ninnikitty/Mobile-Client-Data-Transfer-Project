@@ -33,11 +33,12 @@
     </LinearLayout>
 
     <ListView
+
+        android:clickable="true"
         android:id="@+id/myListView"
-        android:layout_width="411dp"
-        android:layout_height="684dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="47dp" />
-
-
+   
 </LinearLayout>
