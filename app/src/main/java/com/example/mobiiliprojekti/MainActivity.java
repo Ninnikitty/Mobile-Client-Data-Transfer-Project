@@ -6,7 +6,9 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,6 +17,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        final ListView myListView = (ListView)findViewById(R.id.myListView);
+
 
         // Nappi vie main2Activity:lle joka aukaisee uuden sivun randomille eläin kuvalle
         Button main2Activity = (Button) findViewById(R.id.animalButton);
