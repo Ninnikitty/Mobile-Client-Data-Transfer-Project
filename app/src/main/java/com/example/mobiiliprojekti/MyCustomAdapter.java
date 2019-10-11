@@ -55,7 +55,7 @@ public class MyCustomAdapter extends BaseAdapter implements ListAdapter {
 
         //Handle buttons and add onClickListeners
         ImageButton deleteBtn = (ImageButton)view.findViewById(R.id.imgbtnDelete);
-
+        //Delete button
         deleteBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -65,6 +65,7 @@ public class MyCustomAdapter extends BaseAdapter implements ListAdapter {
             }
         });
 
+        //Go to the site button
         Button enterButton = (Button)view.findViewById(R.id.enterButton);
         enterButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -72,8 +73,6 @@ public class MyCustomAdapter extends BaseAdapter implements ListAdapter {
                 String texti = textView.getText().toString();
                 Uri uri = Uri.parse("http://" +texti);
                 Intent intentti = new Intent(Intent.ACTION_VIEW, uri);
-               // Intent linkkiLinkki = new Intent(android.content.Intent.ACTION_VIEW);
-                //linkkiLinkki.setData(Uri.parse("http://" +textView.toString()));
                 context.startActivity(intentti);
             }
         });

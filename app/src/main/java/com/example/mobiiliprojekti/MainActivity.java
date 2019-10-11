@@ -54,17 +54,21 @@ public class MainActivity extends AppCompatActivity {
         });
 
         final ArrayList<String> list = new ArrayList<String>();
+
+        MyCustomAdapter adapter = new MyCustomAdapter(list, this); //instantiate custom adapter
+        ListView listView = findViewById(R.id.myListView);
+        listView.setAdapter(adapter); //handle listview and assign adapter
+
+
+        
+        Intent i = getIntent();
+        String text = i.getStringExtra("Address");
+
+        // Defaulttina
         list.add("google.com");
         list.add("facebook.com");
-
-        //instantiate custom adapter
-        MyCustomAdapter adapter = new MyCustomAdapter(list, this);
-        //handle listview and assign adapter
-        ListView listView = findViewById(R.id.myListView);
-        listView.setAdapter(adapter);
-
-
-
+        list.add(text);
+        adapter.notifyDataSetChanged();
 
 
     }
