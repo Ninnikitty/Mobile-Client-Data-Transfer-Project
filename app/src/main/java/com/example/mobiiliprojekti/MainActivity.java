@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListAdapter;
@@ -16,7 +18,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    ListView lv;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,23 +46,22 @@ public class MainActivity extends AppCompatActivity {
         Button googleButton = (Button) findViewById(R.id.googleButton);
         googleButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+
                 Intent googleLinkki = new Intent(android.content.Intent.ACTION_VIEW);
                 googleLinkki.setData(Uri.parse("http://www.google.com"));
                 startActivity(googleLinkki);
             }
         });
 
-        ArrayList<String> list = new ArrayList<String>();
-        list.add("item1");
-        list.add("item2");
+        final ArrayList<String> list = new ArrayList<String>();
+        list.add("google.com");
+        list.add("facebook.com");
 
         //instantiate custom adapter
         MyCustomAdapter adapter = new MyCustomAdapter(list, this);
         //handle listview and assign adapter
-        ListView lView = (ListView)findViewById(R.id.myListView);
-        lView.setAdapter(adapter);
-
-
+        ListView listView = findViewById(R.id.myListView);
+        listView.setAdapter(adapter);
 
 
 

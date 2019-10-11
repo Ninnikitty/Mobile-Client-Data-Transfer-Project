@@ -1,6 +1,8 @@
 package com.example.mobiiliprojekti;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -57,9 +59,22 @@ public class MyCustomAdapter extends BaseAdapter implements ListAdapter {
         deleteBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                //do something
-                list.remove(position); //or some other task
+                //Deletes row information
+                list.remove(position);
                 notifyDataSetChanged();
+            }
+        });
+
+        Button enterButton = (Button)view.findViewById(R.id.enterButton);
+        enterButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                String texti = textView.getText().toString();
+                Uri uri = Uri.parse("http://" +texti);
+                Intent intentti = new Intent(Intent.ACTION_VIEW, uri);
+               // Intent linkkiLinkki = new Intent(android.content.Intent.ACTION_VIEW);
+                //linkkiLinkki.setData(Uri.parse("http://" +textView.toString()));
+                context.startActivity(intentti);
             }
         });
 

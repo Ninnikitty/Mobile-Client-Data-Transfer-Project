@@ -33,6 +33,7 @@
     </LinearLayout>
 
     <ListView
+        android:clickable="true"
         android:id="@+id/myListView"
         android:layout_width="411dp"
         android:layout_height="684dp"
