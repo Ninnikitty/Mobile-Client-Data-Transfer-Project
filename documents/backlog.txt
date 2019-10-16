@@ -1,0 +1,8 @@
+As a user I can:
+1. Go to google
+2. Add my own sites
+3. Open my own sites
+4. Delete my own sites
+5. See all of the sites on a list
+6. Look at random cat pictures
+7. See a new cat by tilting my phone
